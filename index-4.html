@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>King Joshua | Web Developer</title>
+<meta name="description" content="I help small businesses and growing brands look professional online with clean, fast websites that bring customers.">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="color-scheme" content="dark">
+<meta property="og:title" content="King Joshua | Web Developer">
+<meta property="og:description" content="Clean, fast websites that bring customers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kingjoshuaime.github.io/">
+<link rel="canonical" href="https://kingjoshuaime.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A0A0A'/%3E%3Ctext x='32' y='47' font-size='40' font-family='Impact,Arial Narrow,sans-serif' fill='%23fff' text-anchor='middle'%3EKJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0A0A0A;
+  --panel:#141414;
+  --text:#FFFFFF;
+  --soft:#BDBDBD;
+  --muted:#8C8C8C;
+  --line:rgba(255,255,255,.35);
+  --faint:rgba(255,255,255,.14);
+  --display:"Bebas Neue",Impact,"Arial Narrow",sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --bar:64px;
+  --top:env(safe-area-inset-top,0px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--bar) + var(--top));-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--text);font-family:var(--body);font-weight:300;
+  line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* Small tracked label with a short line */
+.tag{
+  display:flex;align-items:center;gap:14px;
+  font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:400;
+}
+.tag::after{content:"";width:44px;height:1px;background:var(--line)}
+.tag strong{color:var(--text);font-weight:700}
+
+/* Headlines */
+.h{
+  font-family:var(--display);font-weight:400;text-transform:uppercase;
+  line-height:.92;letter-spacing:.005em;
+}
+
+/* Hairline buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:48px;padding:0 24px;border:1px solid #fff;border-radius:3px;
+  font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:400;
+  transition:background .2s,color .2s;
+}
+.btn:hover,.btn:active{background:#fff;color:var(--bg)}
+
+section{border-top:1px solid var(--faint)}
+.sec{padding:72px 0}
+
+/* ---------- Top bar ---------- */
+.bar{
+  position:sticky;top:0;z-index:50;height:calc(var(--bar) + var(--top));
+  background:var(--bg);border-bottom:1px solid var(--faint);padding-top:var(--top);
+}
+.bar .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--display);font-size:32px;line-height:1;letter-spacing:.05em;text-transform:uppercase}
+.burger{width:48px;height:48px;display:grid;place-items:center;margin-right:-12px}
+.burger span,.burger span::before,.burger span::after{
+  display:block;width:26px;height:2px;background:#fff;position:relative;transition:transform .25s,background .25s;
+}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-8px}
+.burger span::after{top:8px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-8px) rotate(-45deg)}
+
+.menu{
+  position:fixed;left:0;right:0;bottom:0;top:calc(var(--bar) + var(--top));z-index:40;
+  background:var(--bg);padding:32px 20px;display:none;flex-direction:column;
+}
+.menu.open{display:flex}
+.menu a{
+  font-family:var(--display);font-size:64px;line-height:1.05;text-transform:uppercase;
+  padding:10px 0;border-bottom:1px solid var(--faint);
+}
+.menu a:active{color:var(--muted)}
+
+/* ---------- Hero ---------- */
+.hero{
+  border-top:0;min-height:calc(100svh - var(--bar) - var(--top));
+  display:flex;align-items:center;padding:72px 0;
+}
+.hero .h{font-size:clamp(64px,19vw,168px);margin:26px 0 22px}
+.hero p{max-width:30ch;color:var(--soft);font-size:17px;margin-bottom:34px}
+/* One page-load moment: the hero lines settle in once */
+.rise{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+.rise:nth-child(2){animation-delay:.12s}
+.rise:nth-child(3){animation-delay:.24s}
+.rise:nth-child(4){animation-delay:.36s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* ---------- Section heads ---------- */
+.work .h,.about .h,.contact .h{font-size:clamp(48px,13vw,92px);margin:20px 0 36px}
+
+/* ---------- Work ---------- */
+.cards{display:grid;gap:14px}
+.card{
+  position:relative;border:1px solid var(--line);border-radius:4px;background:var(--panel);
+  padding:24px 20px 8px;display:flex;flex-direction:column;gap:14px;
+}
+.card .rule{width:44px;height:1px;background:var(--line)}
+.num{position:absolute;top:24px;right:20px;font-size:13px;letter-spacing:.14em;color:var(--muted)}
+.card h3{font-family:var(--display);font-weight:400;font-size:56px;line-height:.95;text-transform:uppercase}
+.card p{color:var(--muted);font-size:15px;max-width:40ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  display:inline-flex;align-items:center;min-height:32px;padding:0 14px;
+  border:1px solid var(--line);border-radius:3px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+}
+.live{
+  align-self:flex-end;display:inline-flex;align-items:center;gap:10px;min-height:52px;
+  font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:400;
+}
+/* Whole card is tappable */
+.live::after{content:"";position:absolute;inset:0;border-radius:4px}
+.live svg{transition:transform .2s}
+.card:hover .live svg{transform:translateX(5px)}
+.card:hover{border-color:rgba(255,255,255,.7)}
+
+/* ---------- Skills ---------- */
+.skills{padding:56px 0}
+.skills .tag{margin-bottom:28px}
+.skills-row{display:flex;align-items:center;gap:12px}
+.chips-scroll{
+  display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x proximity;flex:1;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:2px 0;
+}
+.chips-scroll::-webkit-scrollbar{display:none}
+.pill{
+  flex:0 0 auto;scroll-snap-align:start;display:inline-flex;align-items:center;
+  min-height:48px;padding:0 28px;border:1px solid #fff;border-radius:999px;
+  font-size:15px;letter-spacing:.06em;text-transform:uppercase;font-weight:400;
+}
+.next{flex:0 0 48px;width:48px;height:48px;display:grid;place-items:center}
+.next[hidden]{display:none}
+
+/* ---------- About ---------- */
+.about-row{display:flex;gap:20px;align-items:flex-start}
+.kj-box{
+  flex:0 0 112px;width:112px;height:112px;background:var(--panel);border:1px solid var(--line);border-radius:3px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-size:68px;line-height:1;letter-spacing:.02em;padding-top:5px;
+}
+.about p{color:var(--soft);font-size:16px;max-width:46ch}
+
+/* ---------- Contact ---------- */
+.btns{display:grid;gap:12px;max-width:560px}
+.contact .btn{width:100%;min-height:56px;font-size:15px}
+.btns .small{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.contact .btns .small .btn{min-height:48px;font-size:13px;border-color:rgba(255,255,255,.5)}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--faint);padding:26px 0 calc(26px + env(safe-area-inset-bottom,0px))}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:400}
+.top{
+  display:inline-flex;align-items:center;gap:8px;min-height:48px;
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+}
+.top:hover{color:#fff}
+
+/* ---------- Larger screens ---------- */
+@media (min-width:760px){
+  .wrap{padding:0 40px}
+  .sec{padding:96px 0}
+  .cards{grid-template-columns:1fr 1fr;gap:16px}
+  .card{padding:32px 28px 12px;min-height:300px}
+  .num{top:32px;right:28px}
+  .about-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .about .h,.contact .h{margin-bottom:0}
+  .contact-grid{align-items:end}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rise{opacity:1;transform:none;animation:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="King Joshua, back to top">King Joshua</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-label="Page sections">
+  <a href="#work">Work</a>
+  <a href="#skills">Skills</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Introduction">
+    <div class="wrap">
+      <div class="tag rise">Hello, I’m&nbsp;<strong>King Joshua</strong></div>
+      <h1 class="h rise">I build sites<br>that work.</h1>
+      <p class="rise">Web developer building fast, clean websites with AI-assisted workflows.</p>
+      <div class="rise"><a class="btn" href="#work">View my work</a></div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work sec" id="work">
+    <div class="wrap">
+      <div class="tag">My work</div>
+      <h2 class="h">Selected works</h2>
+
+      <div class="cards">
+
+        <article class="card">
+          <span class="num">01</span>
+          <div class="rule"></div>
+          <h3>Edge</h3>
+          <p>A trading app for tracking your trades and data.</p>
+          <div class="chips"><span class="chip">Web app</span><span class="chip">Trading</span></div>
+          <a class="live" href="https://lw4l.github.io/lw4l-edge/" target="_blank" rel="noopener" aria-label="View Edge live">
+            View live
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M0 7h18M12 1l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <article class="card">
+          <span class="num">02</span>
+          <div class="rule"></div>
+          <h3>Ghost</h3>
+          <p>A habit tracker with a 61-day challenge mode.</p>
+          <div class="chips"><span class="chip">Web app</span><span class="chip">Habits</span></div>
+          <a class="live" href="https://lw4l.github.io/ghost/" target="_blank" rel="noopener" aria-label="View Ghost live">
+            View live
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M0 7h18M12 1l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="wrap">
+      <div class="tag">Skills</div>
+      <div class="skills-row">
+        <div class="chips-scroll" id="chips">
+          <span class="pill">HTML</span>
+          <span class="pill">CSS</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">GitHub</span>
+          <span class="pill">AI workflows</span>
+        </div>
+        <button class="next" id="next" aria-label="Scroll skills">
+          <svg width="22" height="16" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M0 7h18M12 1l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about sec" id="about">
+    <div class="wrap">
+      <div class="tag">About me</div>
+      <div class="about-grid">
+        <h2 class="h">Developer.<br>Builder. Finisher.</h2>
+        <div class="about-row">
+          <div class="kj-box" aria-hidden="true">KJ</div>
+          <p>I help small businesses and growing brands look professional online with clean, fast websites that bring customers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact sec" id="contact">
+    <div class="wrap">
+      <div class="tag">Contact</div>
+      <div class="contact-grid">
+        <h2 class="h">Let’s work<br>together.</h2>
+        <div class="btns">
+          <a class="btn" href="https://wa.me/2348081890959" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" href="mailto:kingjoshuaime@gmail.com">Email</a>
+          <a class="btn" href="https://github.com/kingjoshuaime" target="_blank" rel="noopener">GitHub</a>
+          <div class="small">
+            <a class="btn" href="https://x.com/kingjoshuaime" target="_blank" rel="noopener">X</a>
+            <a class="btn" href="https://www.facebook.com/share/14yLAKYCKjx/" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <small>© King Joshua</small>
+    <a class="top" href="#top">Back to top
+      <svg width="12" height="16" viewBox="0 0 12 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 16V2M1 7l5-5 5 5"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+/* Menu */
+var burger = document.getElementById("burger");
+var menu = document.getElementById("menu");
+function setMenu(open){
+  menu.classList.toggle("open", open);
+  burger.setAttribute("aria-expanded", open ? "true" : "false");
+  burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  document.body.style.overflow = open ? "hidden" : "";
+}
+burger.addEventListener("click", function(){ setMenu(!menu.classList.contains("open")); });
+menu.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+document.addEventListener("keydown", function(e){ if(e.key === "Escape") setMenu(false); });
+
+/* Skills arrow: scrolls the row, hides itself at the end */
+var chips = document.getElementById("chips");
+var next = document.getElementById("next");
+function checkEnd(){
+  var atEnd = chips.scrollLeft + chips.clientWidth >= chips.scrollWidth - 4;
+  var noScroll = chips.scrollWidth <= chips.clientWidth + 4;
+  next.hidden = atEnd || noScroll;
+}
+next.addEventListener("click", function(){ chips.scrollBy({left: 220, behavior: "smooth"}); });
+chips.addEventListener("scroll", checkEnd, {passive:true});
+window.addEventListener("resize", checkEnd);
+checkEnd();
+</script>
+</body>
+</html>
