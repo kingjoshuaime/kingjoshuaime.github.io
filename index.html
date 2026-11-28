@@ -3,28 +3,55 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>King Joshua | Web Developer</title>
-<meta name="description" content="I build fast, clean websites for small businesses that bring customers.">
+<title>King Joshua Ime | Web Developer</title>
+<meta name="description" content="King Joshua Ime is a Nigeria-based web developer building fast, modern websites and web apps, from business sites to trading platforms.">
+<meta name="author" content="King Joshua Ime">
+<meta name="google-site-verification" content="dOh9eVBiFHuSt9JZ42-7KvFwoyIaLEyX9eSo4dBVq7Q">
 <meta name="theme-color" content="#0A0A0A">
 <meta name="color-scheme" content="dark">
-<meta property="og:title" content="King Joshua | Web Developer">
-<meta property="og:description" content="Fast, clean websites for small businesses.">
+<meta property="og:title" content="King Joshua Ime | Web Developer">
+<meta property="og:description" content="King Joshua Ime is a Nigeria-based web developer building fast, modern websites and web apps, from business sites to trading platforms.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kingjoshuaime.github.io/">
-<meta property="og:image" content="https://kingjoshuaime.github.io/og-image.jpg?v=2">
+<meta property="og:image" content="https://kingjoshuaime.github.io/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="King Joshua Ime, Web Developer">
+<meta property="og:image:alt" content="King Joshua Ime, web developer">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="King Joshua | Web Developer">
-<meta name="twitter:description" content="Fast, clean websites for small businesses.">
-<meta name="twitter:image" content="https://kingjoshuaime.github.io/og-image.jpg?v=2">
+<meta name="twitter:title" content="King Joshua Ime | Web Developer">
+<meta name="twitter:description" content="King Joshua Ime is a Nigeria-based web developer building fast, modern websites and web apps, from business sites to trading platforms.">
+<meta name="twitter:image" content="https://kingjoshuaime.github.io/og-image.jpg">
 <link rel="canonical" href="https://kingjoshuaime.github.io/">
-<link rel="icon" type="image/png" sizes="512x512" href="icon.png?v=2">
-<link rel="apple-touch-icon" href="icon.png?v=2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A0A0A'/%3E%3Ctext x='32' y='47' font-size='40' font-family='Impact,Arial Narrow,sans-serif' fill='%23fff' text-anchor='middle'%3EKJ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+<!-- Structured data: tells Google who this site belongs to -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "King Joshua Ime",
+  "alternateName": "King Joshua",
+  "givenName": "King Joshua",
+  "familyName": "Ime",
+  "jobTitle": "Web Developer",
+  "description": "Nigeria-based web developer building fast, modern websites and web apps, from business sites to trading platforms.",
+  "url": "https://kingjoshuaime.github.io/",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "NG"
+  },
+  "knowsAbout": ["Web development", "HTML", "CSS", "JavaScript", "Web apps", "AI-assisted development"],
+  "sameAs": [
+    "https://github.com/kingjoshuaime",
+    "https://x.com/kingjoshuaime",
+    "https://www.facebook.com/share/14yLAKYCKjx/",
+    "https://www.linkedin.com/in/king-joshua-ime-1984622a4"
+  ]
+}
+</script>
 
 <style>
 :root{
@@ -33,7 +60,7 @@
   --text:#FFFFFF;
   --soft:#BDBDBD;
   --muted:#8C8C8C;
-  --gold:#D4AF37;
+  --silver:#C9CED6;
   --line:rgba(255,255,255,.35);
   --faint:rgba(255,255,255,.14);
   --display:"Bebas Neue",Impact,"Arial Narrow",sans-serif;
@@ -47,9 +74,9 @@ body{
   background:var(--bg);color:var(--text);font-family:var(--body);font-weight:300;
   line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
-a{color:inherit;text-decoration:none}
+a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+:focus-visible{outline:2px solid var(--silver);outline-offset:3px}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 
 /* Small tracked label with a short line */
@@ -66,15 +93,16 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   line-height:.92;letter-spacing:.005em;
 }
 
-/* Gold hairline buttons */
+/* Silver hairline buttons */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  min-height:48px;padding:0 24px;border:1.5px solid var(--gold);border-radius:3px;
+  min-height:48px;padding:0 24px;border:1.5px solid var(--silver);border-radius:3px;
   font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:400;
   transition:background .2s,color .2s;
 }
 .btn.main{border-width:2.5px}
-.btn:hover,.btn:active{background:var(--gold);color:var(--bg)}
+.btn:active{background:var(--silver);color:var(--bg)}
+@media (hover:hover){.btn:hover{background:var(--silver);color:var(--bg)}}
 
 section{border-top:1px solid var(--faint)}
 .sec{padding:72px 0}
@@ -86,6 +114,7 @@ section{border-top:1px solid var(--faint)}
 }
 .bar .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
 .logo{font-family:var(--display);font-size:32px;line-height:1;letter-spacing:.05em;text-transform:uppercase}
+.dnav{display:none}
 .burger{width:48px;height:48px;display:grid;place-items:center;margin-right:-12px}
 .burger span,.burger span::before,.burger span::after{
   display:block;width:26px;height:2px;background:#fff;position:relative;transition:transform .25s,background .25s;
@@ -106,28 +135,35 @@ section{border-top:1px solid var(--faint)}
   font-family:var(--display);font-size:64px;line-height:1.05;text-transform:uppercase;
   padding:10px 0;border-bottom:1px solid var(--faint);
 }
-.menu a:active{color:var(--gold)}
+.menu a:active{color:var(--silver)}
 
 /* ---------- Hero ---------- */
 .hero{
   position:relative;overflow:hidden;
   border-top:0;min-height:calc(100svh - var(--bar) - var(--top));
-  display:flex;align-items:center;padding:72px 0;
+  display:flex;align-items:center;padding:72px 0 40px;
 }
-.hero .wrap{position:relative;z-index:1}
+.ghostkj{
+  display:block;position:absolute;right:-4%;bottom:14%;z-index:0;pointer-events:none;
+  font-family:var(--display);font-size:clamp(200px,62vw,460px);line-height:.8;
+  color:transparent;-webkit-text-stroke:1px rgba(201,206,214,.3);
+}
+.hero .wrap{position:relative;z-index:1;width:100%}
 .hero .h{font-size:clamp(64px,19vw,168px);margin:26px 0 22px}
 .hero p{max-width:30ch;color:var(--soft);font-size:17px;margin-bottom:34px}
-/* Big outlined KJ behind the headline, on every screen size */
-.ghostkj{
-  display:block;position:absolute;right:-6%;bottom:2%;z-index:0;pointer-events:none;
-  font-family:var(--display);font-size:clamp(260px,78vw,460px);line-height:.8;
-  color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.2);
+.hero-links{display:flex;flex-wrap:wrap;gap:4px 22px;margin-top:56px}
+.hero-links a{
+  display:inline-flex;align-items:center;min-height:44px;
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:400;
 }
+.hero-links a:active{color:var(--silver)}
+@media (hover:hover){.hero-links a:hover{color:var(--silver)}}
 /* One page-load moment: the hero lines settle in once */
 .rise{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
 .rise:nth-child(2){animation-delay:.12s}
 .rise:nth-child(3){animation-delay:.24s}
 .rise:nth-child(4){animation-delay:.36s}
+.rise:nth-child(5){animation-delay:.48s}
 @keyframes rise{to{opacity:1;transform:none}}
 
 /* ---------- Section heads ---------- */
@@ -148,15 +184,15 @@ section{border-top:1px solid var(--faint)}
   display:inline-flex;align-items:center;min-height:32px;padding:0 14px;
   border:1px solid var(--line);border-radius:3px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
 }
+/* Only this link is tappable. Big tap area so it is easy to hit. */
 .live{
-  align-self:flex-end;display:inline-flex;align-items:center;gap:10px;min-height:52px;color:var(--gold);
+  align-self:flex-end;display:inline-flex;align-items:center;gap:10px;min-height:56px;
+  padding:0 4px 0 24px;color:var(--silver);
   font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:400;
 }
-/* Whole card is tappable */
-.live::after{content:"";position:absolute;inset:0;border-radius:4px}
 .live svg{transition:transform .2s}
-.card:hover .live svg{transform:translateX(5px)}
-.card:hover{border-color:rgba(212,175,55,.7)}
+.live:active svg{transform:translateX(5px)}
+@media (hover:hover){.live:hover svg{transform:translateX(5px)}}
 
 /* ---------- What I do ---------- */
 .svc{border-top:1px solid var(--faint);padding:22px 0;display:grid;gap:6px}
@@ -166,10 +202,11 @@ section{border-top:1px solid var(--faint)}
 .tools{margin-top:22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:400}
 
 /* ---------- About ---------- */
-.about-row{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
-.kj-photo{
-  flex:0 0 140px;width:140px;height:140px;border:1px solid var(--line);border-radius:3px;
-  object-fit:cover;background:var(--bg);display:block;
+.about-row{display:flex;gap:20px;align-items:flex-start}
+.kj-box{
+  flex:0 0 112px;width:112px;height:112px;border:1px solid var(--line);border-radius:3px;
+  background:var(--panel);display:grid;place-items:center;
+  font-family:var(--display);font-size:64px;line-height:1;letter-spacing:.04em;color:var(--silver);
 }
 .about p{color:var(--soft);font-size:16px;max-width:46ch}
 
@@ -179,7 +216,7 @@ section{border-top:1px solid var(--faint)}
 .btns .small{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
 .contact .btns .small .btn{min-height:48px;font-size:13px}
 .hire{margin-top:8px;color:var(--soft);font-size:15px}
-.hire a{color:var(--gold);border-bottom:1px solid var(--gold);padding:12px 0}
+.hire a{color:var(--silver);border-bottom:1px solid var(--silver);padding:12px 0}
 
 /* ---------- Footer ---------- */
 footer{border-top:1px solid var(--faint);padding:26px 0 calc(26px + env(safe-area-inset-bottom,0px))}
@@ -189,19 +226,18 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
   display:inline-flex;align-items:center;gap:8px;min-height:48px;
   font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
 }
-.top:hover{color:var(--gold)}
+@media (hover:hover){.top:hover{color:var(--silver)}}
 
 /* ---------- Larger screens ---------- */
-@media (min-width:520px){
-  .about-row{flex-direction:row}
-}
 @media (min-width:760px){
   .wrap{padding:0 40px}
   .sec{padding:96px 0}
-  .ghostkj{
-    right:-2%;bottom:6%;font-size:clamp(220px,34vw,460px);
-    -webkit-text-stroke:1px rgba(255,255,255,.22);
-  }
+  .burger,.menu{display:none!important}
+  .dnav{display:flex;align-items:center;gap:32px}
+  .dnav a:not(.btn){font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;color:var(--soft)}
+  @media (hover:hover){.dnav a:not(.btn):hover{color:var(--silver)}}
+  .dnav .btn{min-height:40px;padding:0 18px;font-size:12px}
+  .ghostkj{right:-2%;bottom:6%;font-size:clamp(220px,34vw,460px)}
   .cards{grid-template-columns:1fr 1fr;gap:16px}
   .card{padding:32px 28px 12px;min-height:300px}
   .num{top:32px;right:28px}
@@ -209,6 +245,9 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
   .about .h,.contact .h{margin-bottom:0}
   .contact-grid{align-items:end}
   .svc{grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+}
+@media (min-width:1000px){
+  .cards{grid-template-columns:repeat(3,1fr)}
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -224,6 +263,12 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
 <header class="bar">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="King Joshua, back to top">King Joshua</a>
+    <nav class="dnav" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#services">What I do</a>
+      <a href="#about">About</a>
+      <a class="btn" href="#contact">Let’s work</a>
+    </nav>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span></button>
   </div>
 </header>
@@ -243,8 +288,14 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
     <div class="wrap">
       <div class="tag rise">Hello, I’m&nbsp;<strong>King Joshua</strong></div>
       <h1 class="h rise">I build sites<br>that work.</h1>
-      <p class="rise">I build fast, clean websites for small businesses.</p>
+      <p class="rise">I build fast, clean websites and web apps.</p>
       <div class="rise"><a class="btn" href="#work">View my work</a></div>
+      <div class="hero-links rise">
+        <a href="https://github.com/kingjoshuaime" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://x.com/kingjoshuaime" target="_blank" rel="noopener">X</a>
+        <a href="https://wa.me/2348081890959" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.facebook.com/share/14yLAKYCKjx/" target="_blank" rel="noopener">Facebook</a>
+      </div>
     </div>
   </section>
 
@@ -259,6 +310,18 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
         <article class="card">
           <span class="num">01</span>
           <div class="rule"></div>
+          <h3>Offpack</h3>
+          <p>A trading journal that logs how you felt, not just the price.</p>
+          <div class="chips"><span class="chip">Web app</span><span class="chip">Trading</span></div>
+          <a class="live" href="https://offpackapp.github.io/" target="_blank" rel="noopener" aria-label="View Offpack live">
+            View live
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M0 7h18M12 1l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <article class="card">
+          <span class="num">02</span>
+          <div class="rule"></div>
           <h3>Edge</h3>
           <p>A trading app for tracking your trades and data.</p>
           <div class="chips"><span class="chip">Web app</span><span class="chip">Trading</span></div>
@@ -269,7 +332,7 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
         </article>
 
         <article class="card">
-          <span class="num">02</span>
+          <span class="num">03</span>
           <div class="rule"></div>
           <h3>Ghost</h3>
           <p>A habit tracker with a 61-day challenge mode.</p>
@@ -296,7 +359,7 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
       </div>
       <div class="svc">
         <h3>Web apps</h3>
-        <p>Useful tools that run in the browser, like Edge and Ghost.</p>
+        <p>Useful tools that run in the browser, like Offpack, Edge and Ghost.</p>
       </div>
       <div class="svc">
         <h3>Fixes and upgrades</h3>
@@ -314,8 +377,8 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
       <div class="about-grid">
         <h2 class="h">Developer.<br>Builder. Finisher.</h2>
         <div class="about-row">
-          <img class="kj-photo" src="dp.jpg" alt="King Joshua Ime, Web Developer" width="140" height="140" loading="lazy">
-          <p>I help small businesses and growing brands look professional online with clean, fast websites that bring customers.</p>
+          <div class="kj-box" aria-hidden="true">KJ</div>
+          <p>I’m King Joshua Ime, a web developer based in Nigeria. I help businesses and brands look professional online with clean, fast websites and web apps that bring results.</p>
         </div>
       </div>
     </div>
@@ -345,7 +408,7 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
 
 <footer>
   <div class="wrap">
-    <small>© King Joshua</small>
+    <small>© King Joshua Ime</small>
     <a class="top" href="#top">Back to top
       <svg width="12" height="16" viewBox="0 0 12 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 16V2M1 7l5-5 5 5"/></svg>
     </a>
