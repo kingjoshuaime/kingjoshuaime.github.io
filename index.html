@@ -203,11 +203,10 @@ section{border-top:1px solid var(--faint)}
 .tools{margin-top:22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:400}
 
 /* ---------- About ---------- */
-.about-row{display:flex;gap:20px;align-items:flex-start}
-.kj-box{
-  flex:0 0 112px;width:112px;height:112px;border:1px solid var(--line);border-radius:3px;
-  background:var(--panel);display:grid;place-items:center;
-  font-family:var(--display);font-size:64px;line-height:1;letter-spacing:.04em;color:var(--silver);
+.about-row{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.kj-photo{
+  flex:0 0 auto;width:180px;height:180px;border:1px solid var(--line);border-radius:3px;
+  object-fit:cover;background:var(--bg);display:block;
 }
 .about p{color:var(--soft);font-size:16px;max-width:46ch}
 
@@ -230,6 +229,11 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
 @media (hover:hover){.top:hover{color:var(--silver)}}
 
 /* ---------- Larger screens ---------- */
+/* About: photo beside the text on wider phones/tablets (single column) */
+@media (min-width:520px) and (max-width:759px){
+  .about-row{flex-direction:row}
+  .kj-photo{width:200px;height:200px}
+}
 @media (min-width:760px){
   .wrap{padding:0 40px}
   .sec{padding:96px 0}
@@ -246,9 +250,11 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
   .about .h,.contact .h{margin-bottom:0}
   .contact-grid{align-items:end}
   .svc{grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .kj-photo{width:200px;height:200px}
 }
 @media (min-width:1000px){
   .cards{grid-template-columns:repeat(3,1fr)}
+  .about-row{flex-direction:row}
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -378,7 +384,7 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
       <div class="about-grid">
         <h2 class="h">Developer.<br>Builder. Finisher.</h2>
         <div class="about-row">
-          <div class="kj-box" aria-hidden="true">KJ</div>
+          <img class="kj-photo" src="dp.jpg" alt="King Joshua Ime, Web Developer" width="180" height="180" loading="lazy">
           <p>I’m King Joshua Ime, a web developer based in Nigeria. I help businesses and brands look professional online with clean, fast websites and web apps that bring results.</p>
         </div>
       </div>
