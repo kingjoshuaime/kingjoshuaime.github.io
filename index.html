@@ -86,7 +86,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:400;
 }
 .tag::after{content:"";width:44px;height:1px;background:var(--line)}
-.tag strong{color:var(--text);font-weight:700}
+.tag strong{color:var(--text);font-weight:700;white-space:nowrap}
 
 /* Headlines */
 .h{
@@ -114,7 +114,7 @@ section{border-top:1px solid var(--faint)}
   background:var(--bg);border-bottom:1px solid var(--faint);padding-top:var(--top);
 }
 .bar .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:var(--display);font-size:32px;line-height:1;letter-spacing:.05em;text-transform:uppercase}
+.logo{font-family:var(--display);font-size:32px;line-height:1;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
 .dnav{display:none}
 .burger{width:48px;height:48px;display:grid;place-items:center;margin-right:-12px}
 .burger span,.burger span::before,.burger span::after{
@@ -144,11 +144,6 @@ section{border-top:1px solid var(--faint)}
   border-top:0;min-height:calc(100svh - var(--bar) - var(--top));
   display:flex;align-items:center;padding:72px 0 40px;
 }
-.ghostkj{
-  display:block;position:absolute;right:-4%;bottom:14%;z-index:0;pointer-events:none;
-  font-family:var(--display);font-size:clamp(200px,62vw,460px);line-height:.8;
-  color:transparent;-webkit-text-stroke:1px rgba(201,206,214,.3);
-}
 .hero .wrap{position:relative;z-index:1;width:100%}
 .hero .h{font-size:clamp(64px,19vw,168px);margin:26px 0 22px}
 .hero p{max-width:30ch;color:var(--soft);font-size:17px;margin-bottom:34px}
@@ -159,6 +154,11 @@ section{border-top:1px solid var(--faint)}
 }
 .hero-links a:active{color:var(--silver)}
 @media (hover:hover){.hero-links a:hover{color:var(--silver)}}
+/* Very small phones: shorten the line so the full name fits */
+@media (max-width:360px){
+  .hero .tag{gap:10px;letter-spacing:.14em}
+  .hero .tag::after{width:20px}
+}
 /* One page-load moment: the hero lines settle in once */
 .rise{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
 .rise:nth-child(2){animation-delay:.12s}
@@ -242,7 +242,6 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
   .dnav a:not(.btn){font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;color:var(--soft)}
   @media (hover:hover){.dnav a:not(.btn):hover{color:var(--silver)}}
   .dnav .btn{min-height:40px;padding:0 18px;font-size:12px}
-  .ghostkj{right:-2%;bottom:6%;font-size:clamp(220px,34vw,460px)}
   .cards{grid-template-columns:1fr 1fr;gap:16px}
   .card{padding:32px 28px 12px;min-height:300px}
   .num{top:32px;right:28px}
@@ -269,7 +268,7 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
 
 <header class="bar">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="King Joshua, back to top">King Joshua</a>
+    <a class="logo" href="#top" aria-label="King Joshua Ime, back to top">King Joshua Ime</a>
     <nav class="dnav" aria-label="Main">
       <a href="#work">Work</a>
       <a href="#services">What I do</a>
@@ -291,9 +290,8 @@ footer small{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-w
 
   <!-- HERO -->
   <section class="hero" aria-label="Introduction">
-    <div class="ghostkj" aria-hidden="true">KJ</div>
     <div class="wrap">
-      <div class="tag rise">Hello, I’m&nbsp;<strong>King Joshua</strong></div>
+      <div class="tag rise">Hello, I’m&nbsp;<strong>King Joshua Ime</strong></div>
       <h1 class="h rise">I build sites<br>that work.</h1>
       <p class="rise">I build fast, clean websites and web apps.</p>
       <div class="rise"><a class="btn" href="#work">View my work</a></div>
